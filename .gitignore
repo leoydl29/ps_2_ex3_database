@@ -4,3 +4,6 @@
 # Ignore database files
 *.sqlite
 *.sqlite3
+
+# Compiled Python files
+*.pyc
