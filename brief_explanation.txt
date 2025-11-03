@@ -1,0 +1,9 @@
+The purpose of the code block: 
+"if __name__ == "__main__":
+    main()" 
+is to check if the Python Script is being run or imported into another file. If it is being imported
+then the if statment is false and the main() function is not executed. However, if it is being run 
+from the terminal, then the if statement becomes true and the main function is executed. 
+
+The click command enables command line interface functionality by automatically parsing the 
+arguments you type, validating them, and then calling your main() function with them.

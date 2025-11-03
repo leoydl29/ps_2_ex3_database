@@ -1,0 +1,9 @@
+# Ignore data files
+*.csv
+
+# Ignore database files
+*.sqlite
+*.sqlite3
+
+# Compiled Python files
+*.pyc

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba"
+version = "0.1.0"
+
+# Core libraries the package needs to function
+dependencies = [
+    "polars",
+    "pandas",
+    "duckdb",
+    "kaggle",
+    "sqlite",
+    "seaborn",
+    "pre-commit",
+    "ipykernel",
+    "click",
+]
