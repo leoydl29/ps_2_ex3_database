@@ -1,0 +1,67 @@
+# ========================================
+# pyproject.toml — packaging-focused setup
+# For the "nba" project
+# ========================================
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# ----------------------------------------
+# Project metadata (PEP 621)
+# ----------------------------------------
+[project]
+name = "nba"
+version = "0.1.0"
+description = "A data analysis project exploring NBA datasets using Polars, DuckDB, and Pandas."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Jacob Schwandt" }]
+maintainers = [{ name = "Jacob Schwandt" }]
+keywords = ["NBA", "data", "DuckDB", "Polars", "Pandas", "basketball"]
+
+# ----------------------------------------
+# Core dependencies (runtime)
+# ----------------------------------------
+dependencies = [
+  "polars",
+  "pandas",
+  "duckdb",
+  "seaborn",
+  "matplotlib",
+  "click",
+]
+
+# ----------------------------------------
+# Optional extras (e.g. dev environment)
+# ----------------------------------------
+[project.optional-dependencies]
+dev = [
+  "pre-commit",
+  "black",
+  "flake8",
+  "mypy",
+  "isort",
+  "pytest",
+  "ipykernel",
+  "kaggle",
+]
+
+# ----------------------------------------
+# Entry points (optional CLI command)
+# ----------------------------------------
+# If your project uses Click to create a CLI tool, expose it here:
+[project.scripts]
+nba-cli = "nba.main:main"
+# This allows users to run "nba-cli" in terminal after installing.
+
+# ----------------------------------------
+# Include/exclude patterns for packaging
+# ----------------------------------------
+[tool.setuptools]
+packages = ["nba"]
+include-package-data = true
+# Optional: specify non-code files to include
+# [tool.setuptools.package-data]
+# nba = ["data/*.csv"]
