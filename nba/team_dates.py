@@ -9,6 +9,7 @@ def plot_team_founding_years(con, teams_display):
     Args:
         con: A database connection object (e.g., from sqlite3,
              duckdb) that pandas.read_sql can use.
+        team_displa: The number of teams to display on the chart. 
 
     Returns:
         matplotlib.axes.Axes: The Axes object containing the bar chart,
